@@ -19,26 +19,26 @@ export default function HomePage({ onOpenBooking }: HomePageProps) {
       <div className="grid grid-cols-1 md:grid-cols-12 md:grid-rows-6 gap-6 min-h-[800px]">
         
         {/* Hero Block: Large Visual (span 7 cols, 4 rows) */}
-        <div className="md:col-span-12 lg:col-span-7 lg:row-span-4 bento-card relative min-h-[400px]">
+        <div className="md:col-span-12 lg:col-span-7 lg:row-span-4 bento-card relative min-h-[480px] md:min-h-[400px]">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&q=80&w=1024')] bg-cover bg-center"></div>
           <div className="absolute inset-0 bg-boston-navy/40 mix-blend-multiply"></div>
           <div className="absolute inset-0 gradient-overlay"></div>
-          <div className="absolute bottom-8 left-8 right-8 text-white z-10">
-            <div className="inline-block bg-boston-gold px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">
+          <div className="absolute bottom-6 md:bottom-8 left-6 md:left-8 right-6 md:right-8 text-white z-10 flex flex-col justify-end">
+            <div className="self-start bg-boston-gold px-2.5 py-1 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest mb-3 md:mb-4">
               Уютный Коттеджный Стиль
             </div>
-            <h1 className="text-4xl md:text-5xl font-serif mb-4 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-3 md:mb-4 leading-tight">
               {t('home.heroTitle')}
             </h1>
-            <p className="text-white/80 max-w-lg text-sm md:text-base mb-6">
+            <p className="text-white/80 max-w-lg text-sm md:text-base mb-5 md:mb-6 line-clamp-3 md:line-clamp-none">
               {t('home.heroSubtitle')}
             </p>
-            <div className="flex flex-wrap gap-4">
-              <button onClick={() => onOpenBooking('')} className="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full text-sm font-bold border border-white/40 text-white hover:bg-white/30 transition-colors">
+            <div className="flex flex-wrap gap-3 md:gap-4 items-center">
+              <button onClick={() => onOpenBooking('')} className="bg-white/20 backdrop-blur-md px-5 py-2.5 md:px-6 md:py-3 rounded-full text-sm font-bold border border-white/40 text-white hover:bg-white/30 transition-colors">
                 {t('cta.book')}
               </button>
-              <div className="flex items-center gap-2 text-sm text-white/90">
-                <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse"></span>
+              <div className="flex items-center gap-2 text-xs md:text-sm text-white/90">
+                <span className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-green-400 animate-pulse"></span>
                 Есть свободные места
               </div>
             </div>
